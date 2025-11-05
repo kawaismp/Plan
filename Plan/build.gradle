@@ -123,9 +123,9 @@ subprojects {
         // Required for JUnit to discover tests in modules.
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
-        // Local JAR dependency added globally to all subprojects
+        // Local JAR dependency added globally to all subprojects - compile-time only (API)
         // Uses forward slashes so it works on Windows in Gradle strings.
-        implementation files('C:/Users/broki/IdeaProjects/velocityxbox2/target/velocityxbox-2.0-SNAPSHOT.jar')
+        compileOnly files('C:/Users/broki/IdeaProjects/velocityxbox2/target/velocityxbox-2.0-SNAPSHOT.jar')
     }
 
     test {
