@@ -58,7 +58,8 @@ import java.util.logging.Level;
         description = "Player Analytics Plugin by AuroraLS3",
         dependencies = {
                 @Dependency(id = "viaversion", optional = true),
-                @Dependency(id = "redisbungee", optional = true)
+                @Dependency(id = "redisbungee", optional = true),
+                @Dependency(id = "velocityxbox", optional = true),
         },
         authors = {"AuroraLS3"}
 )

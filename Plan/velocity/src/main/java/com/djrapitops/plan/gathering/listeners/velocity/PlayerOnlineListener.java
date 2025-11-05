@@ -31,6 +31,7 @@ import com.velocitypowered.api.event.connection.DisconnectEvent;
 import com.velocitypowered.api.event.connection.PostLoginEvent;
 import com.velocitypowered.api.event.player.ServerConnectedEvent;
 import com.velocitypowered.api.proxy.Player;
+import net.kawaismp.velocityxbox.event.PlayerLoginSuccessEvent;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -68,7 +69,7 @@ public class PlayerOnlineListener {
     }
 
     @Subscribe(order = PostOrder.LAST)
-    public void onPostLogin(PostLoginEvent event) {
+    public void onPostLogin(PlayerLoginSuccessEvent event) {
         try {
             actOnLogin(event);
         } catch (Exception e) {
@@ -76,7 +77,7 @@ public class PlayerOnlineListener {
         }
     }
 
-    public void actOnLogin(PostLoginEvent event) {
+    public void actOnLogin(PlayerLoginSuccessEvent event) {
         Player player = event.getPlayer();
         long time = System.currentTimeMillis();
 
